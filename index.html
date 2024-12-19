@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .search-bar {
+            display: flex;
+            width: 50%;
+        }
+
+        .navbar input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .navbar button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Video grid */
+        .videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .video-card {
+            background-color: #fff;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .video-details {
+            padding: 10px;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .video-channel {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>🔍</button>
+    </div>
+</div>
+
+<!-- Videos Container -->
+<div class="videos-container">
+    <div class="video-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ywCVSrbJXFY?si=FKOhazvXvXDgHFBe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img src="https://m.media-amazon.com/images/I/51VVDO7qEHL._UXNaN_FMjpg_QL85_.jpg" alt="rasm">
+        <div class="video-details">
+            <p class="video-title">Sample Video Title</p>
+            <p class="video-channel">Channel Name</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail">
+        <div class="video-details">
+            <p class="video-title">Another Video Title</p>
+            <p class="video-channel">Another Channel</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail">
+        <div class="video-details">
+            <p class="video-title">Yet Another Video</p>
+            <p class="video-channel">Third Channel</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
